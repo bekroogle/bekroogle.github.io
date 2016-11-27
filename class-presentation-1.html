@@ -1,0 +1,752 @@
+<!DOCTYPE html>
+<html lang="en-US">
+<head>
+  <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+  <meta name="generator" content="Madoko, version 1.0.3" />
+  <meta name="viewport" content="initial-scale=1.0" />
+  <meta name="author" content="Benjamin J. Kruger" />
+  <title>Ancient Math and Number Systems</title>
+  <style type="text/css"  class="link">
+  /*# sourceURL=madoko.css */
+  
+  .madoko .toc>.tocblock .tocblock .tocblock {
+    margin-left: 2.25em;
+  }
+  .madoko .toc>.tocblock .tocblock {
+    margin-left: 1.5em;
+  }
+  .madoko .toc-contents>.tocblock>.tocitem {
+    font-weight: bold;
+  }
+  .madoko .toc {
+    margin-top: 1em;
+  }
+  .madoko p.para-continue {
+    margin-bottom: 0pt;
+  }
+  .madoko .para-block+p {
+    margin-top: 0pt;
+  }
+  .madoko ul.para-block, .madoko ol.para-block {
+    margin-top: 0pt;
+    margin-bottom: 0pt;
+  }
+  .madoko ul.para-end, .madoko ol.para-end {
+    margin-bottom: 1em;
+  }
+  .madoko dl {
+    margin-left: 0em;
+  }
+  .madoko blockquote {
+    font-style: italic;
+  }
+  .madoko a.localref {
+    text-decoration: none;
+  }
+  .madoko a.localref:hover {
+    text-decoration: underline;
+  }
+  .madoko .footnotes {
+    font-size: smaller;
+    margin-top: 2em;
+  }
+  .madoko .footnotes hr {
+    width: 50%;
+    text-align: left;
+  }
+  .madoko .footnote { 
+    margin-left: 1em;
+  }
+  .madoko .footnote-before {
+    margin-left: -1em;
+    width: 1em;
+    display: inline-block;
+  }
+  .madoko .align-center, .madoko .align-center>p {
+    text-align: center !important;
+  }
+  .madoko .align-center pre {
+    text-align: left;
+  }
+  .madoko .align-center>* {
+    margin-left: auto !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-left, .madoko .align-left>p {
+    text-align: left !important;
+  }
+  .madoko .align-left>* {
+    margin-left: 0pt !important;
+    margin-right: auto !important;
+  }
+  .madoko .align-right, .madoko .align-right>p {
+    text-align: right !important;
+  }
+  .madoko .align-right>* {
+    margin-left: auto !important;
+    margin-right: 0pt !important;
+  }
+  .madoko .align-center>table,
+  .madoko .align-left>table,
+  .madoko .align-right>table {
+    text-align: left !important;
+  }
+  .madoko .equation-before {
+    float: right;
+  }
+  .madoko .bibitem {
+    font-size: smaller;
+  }
+  .madoko .bibsearch {
+    font-size: x-small;
+    text-decoration:none;
+    color: black;
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  .madoko .block, .madoko .figure, .madoko .bibitem, .madoko .equation, .madoko div.math {
+    margin-top: 1ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .figure {
+    padding: 0.5em;
+    margin-left: 0pt;
+    margin-right: 0pt;
+  }
+  .madoko .hidden {
+    display: none;
+  }
+  .madoko .invisible {
+    visibility: hidden;
+  }
+  .madoko.preview .invisible {
+    visibility: visible;
+    opacity: 0.5;
+  }
+  .madoko code.code, .madoko span.code {
+    white-space: pre-wrap;
+  }
+  .madoko hr, hr.madoko {
+    border: none;
+    border-bottom: black solid 1px;
+    margin-bottom: 0.5ex;
+  }
+  .madoko .framed>*:first-child {
+    margin-top: 0pt;
+  }
+  .madoko .framed>*:last-child {
+    margin-bottom: 0pt;
+  }
+  .madoko ul.list-style-type-dash {
+      list-style-type: none !important;
+  }
+  .madoko ul.list-style-type-dash > li:before {
+      content: "\2013"; 
+      position: absolute;
+      margin-left: -1em; 
+  }
+  .madoko table.madoko {
+    border-collapse: collapse;
+  }
+  .madoko td, .madoko th {
+    padding: 0ex 0.5ex;
+    margin: 0pt;
+    vertical-align: top;
+  }
+  .madoko .cell-border-left {
+    border-left: 1px solid black;
+  }
+  .madoko .cell-border-right {
+    border-right: 1px solid black;
+  }
+  .madoko thead>tr:first-child>.cell-line,
+  .madoko tbody:first-child>tr:first-child>.cell-line {
+    border-top: 1px solid black;
+    border-bottom: none;
+  }
+  .madoko .cell-line, .madoko .cell-double-line {
+    border-bottom: 1px solid black;
+    border-top: none;
+  }
+  .madoko .cell-double-line {
+    border-top: 1px solid black;
+    padding-top: 1.5px !important;
+  }
+  .madoko .input-mathpre .MathJax_Display {
+    text-align: left !important;
+  }
+  .madoko div.input-mathpre {
+    text-align: left;
+    margin-top: 1.5ex;
+    margin-bottom: 1ex;
+  }
+  .madoko .math-rendering {
+    color: gray;
+  }
+  .madoko .mathdisplay {
+    text-align: center;
+  }
+  .madoko .pretty table {
+    border-collapse: collapse;
+  }
+  .madoko .pretty td {
+    padding: 0em;
+  }
+  .madoko .pretty td.empty {
+    min-width: 1.5ex;
+  }
+  .madoko .pretty td.expander {
+    width: 100em;
+  }
+  body.madoko, .madoko .serif {
+    font-family: Cambria,"Times New Roman","Liberation Serif","Times",serif;
+  }
+  .madoko .sans-serif {
+    font-family: "Calibri", "Optima", sans-serif;
+  }
+  .madoko .symbol {
+    font-family: "Segoe UI Symbol", Symbola, serif;
+  }
+  body.madoko {  
+    -webkit-text-size-adjust: 100%;       
+    text-rendering: optimizeLegibility;
+  }
+  body.madoko {
+    max-width: 88ex; 
+    margin: 1em auto;
+    padding: 0em 2em;  
+  }
+  body.preview.madoko {
+    padding: 0em 1em;
+  }
+  .madoko p {
+    text-align: justify;
+  }
+  .madoko h1, .madoko h2, .madoko h3, .madoko h4 { 
+    margin-top: 1.22em; 
+    margin-bottom: 1ex;
+  }
+  .madoko h1+p, .madoko h2+p, .madoko h3+p, .madoko h4+p, .madoko h5+p  { 
+    margin-top: 1ex;    
+  }
+  .madoko h5, .madoko h6 { 
+    margin-top: 1ex;
+    font-size: 1em;
+  }
+  .madoko h5 { 
+    margin-bottom: 0.5ex;
+  }
+  .madoko h5 + p {
+    margin-top: 0.5ex;
+  }
+  .madoko h6 { 
+    margin-bottom: 0pt;
+  }
+  .madoko h6 + p {
+    margin-top: 0pt;
+  }
+  .madoko pre, .madoko code, .madoko kbd, .madoko samp, .madoko tt, 
+  .madoko .monospace, .madoko .token-indent, .madoko .reveal pre, .madoko .reveal code, .madoko .email {
+    font-family: Consolas,"Andale Mono WT","Andale Mono",Lucida Console,Monaco,monospace,monospace;
+    font-size: 0.85em;
+  }
+  .madoko pre code, .madoko .token-indent {
+    font-size: 0.95em;
+  }
+  .madoko pre code {
+    font-family: inherit !important;
+  }
+  .madoko ol.linenums li {
+    background-color: white;
+    list-style-type: decimal;
+  }
+  .madoko .remote {
+    background-color: #F0FFF0;
+  }
+  .madoko .remote + * {
+    margin-top: 0pt;
+  }
+  @media print {
+    body.madoko {
+      font-size: 10pt;
+    }
+    @page {
+      margin: 1in 1.5in;
+    }
+  }
+  @media only screen and (max-device-width:1024px) {
+    body.madoko {
+      padding: 0em 0.5em;    
+    }
+    .madoko li {
+      text-align: left;
+    }
+  }
+  
+    </style>
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/reveal.js/2.6.2/css/reveal.min.css"  class="link">
+  <link rel="stylesheet" type="text/css" href="https://cdn.jsdelivr.net/reveal.js/2.6.2/css/theme/sky.css"  class="link">
+  <script src="https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/head.min.js"  class="script preview"></script>
+  <script src="https://cdn.jsdelivr.net/reveal.js/2.6.2/js/reveal.js"  class="script preview"></script>
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+      <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+      <link rel="stylesheet" href="https://cdn.jsdelivr.net/reveal.js/2.6.2/css/theme/sky.css" id="theme">    
+      <!--[if lt IE 9]>
+      <script src="https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/html5shiv.js"></script>
+      <![endif]-->
+      <style>
+      body.madoko {
+        margin: 0pt;
+        padding: 0pt;
+        max-width: 100%;      
+      }
+      .madoko .reveal h1 {
+          font-size: 3.7em;
+      }
+      .madoko .reveal h2 {
+          font-size: 2.1em;
+      }
+      .reveal .authorblock .author {
+          font-size: 120%;
+          margin-bottom: 1ex;
+      }        
+      .reveal table {
+          margin-left: auto;
+          margin-right: auto;
+      }
+      .reveal pre table {
+        margin-left: 0pt;
+      }
+      .madoko .reveal pre.pretty {
+        padding-top: 0pt;
+        padding-bottom: 0pt;
+      }
+      .reveal li p {
+          text-align: left;
+      }
+      .reveal h2 {
+          margin-bottom: 0.7em;
+      }
+      .reveal section ul,
+      .reveal section ol {
+          margin-top: 0.35em;
+          margin-bottom: 0.35em;
+      }
+      .reveal section img.math-display {
+          padding: 1em;
+          box-shadow: none;
+          border: none;
+      }
+      .reveal section img.math-inline {
+          margin: 0pt;
+          padding: 0pt;
+          background-color: none;
+          box-shadow: none;
+          border: none;
+      }
+      .reveal section img {
+          box-shadow: none;
+          border: none;
+      }
+      .madoko .reveal pre {
+          border: 1px solid black;
+          word-wrap: normal;
+          background-color: white;
+          font-size: 0.7em;
+          padding: 0.7em;
+          line-height: 100%;
+          width: 100%;
+      }      
+      .reveal pre code, .reveal code {
+          padding: 0pt;
+      }
+      .reveal nav.toc {
+          line-height: 1em;
+          font-size: 60%;
+          overflow-y: auto;
+      }    
+      .reveal .tocitem {
+          text-align: left;
+      }
+      .reveal .toc>.tocblock .tocblock {
+          margin-left: 0.5em;
+      }   
+      .reveal .toc>.tocblock .tocblock .tocblock {
+          margin-left: 1em;
+      }
+      .reveal .bibliography {
+        height: 18em;
+        overflow-y: auto;
+        font-size: 0.8em;
+        line-height: 1.25;
+      }
+      .reveal section[data-smaller=""],
+      .reveal section[data-smaller="true"] {
+        font-size: 80%;
+        width: 110%;
+      }
+      .reveal .slides>section[data-smaller=""],
+      .reveal .slides>section[data-smaller="true"] {
+        left: -55%;
+      }
+      .reveal .details {
+        display: none;
+      }
+      .reveal[data-details=""] .details,
+      .reveal[data-details="true"] .details {
+        display: initial;
+      }
+      /* Display in the preview window */
+      html, body.madoko.preview, body.madoko.preview-full, .body.madoko {
+        height  : 100% !important;
+        width   : auto!important;
+        padding : 0pt !important;
+        margin  : 0pt !important;
+      }
+      body.madoko.preview, body.madoko.preview-full, .preview .body.madoko {
+        overflow: hidden !important;
+      }
+      body.preview .reveal .slides .fragment {
+        visibility: visible;
+        opacity: 0.5;
+      }
+      body.preview .reveal .slides .fragment.visible {
+        opacity: 1.0;
+      }
+      .preview .reveal div.notes,
+      .preview .reveal aside.notes {
+        display  : block;
+        position : absolute;
+        width    : 30%;
+        left     : 70%;
+        top      : -15%;
+        font-size: 50%;
+        border   : 1px solid black;
+        border-radius   : 10px;
+        background-color: white;
+      }
+      /* 'static' display in the preview window, unused for now */
+      body.preview.static div.reveal, 
+      body.preview.static div.ticreveal .slides, 
+      body.preview.static div.reveal section {
+        display: block !important;
+        position: relative !important;
+        width: auto !important;      
+      }
+      body.preview.static div.reveal section {
+        border: solid 1px black;
+        padding: 1em !important;
+        margin-top: 1em;
+        min-height: 15em;
+        top: 0pt;
+      }
+      body.madoko.preview.static section {
+        font-size: 75%;
+      }
+      body.madoko.preview.static {
+        padding: 0em 1em !important;
+      }
+      body.madoko.preview.static .reveal pre {
+        width: 95%;
+      }    
+      body.preview .reveal[data-details="false"] .details {
+        display: initial;
+        color: gray;
+      }
+      body.preview .reveal[data-long="false"] section[data-long] {
+        border-left: 2px black solid;
+      }
+      </style>
+      <script>    
+      // Full list of configuration options available here:
+      // https://github.com/hakimel/reveal.js#configuration
+      window.revealConfig = {
+          controls: true,
+          progress: true,
+          history: true,
+          center: /^\s*(true|1)\s*$/i.test("true"),
+          slideNumber: /^\s*(true|1)\s*$/i.test("true"),
+          dependencies: [
+            { src: 'https://cdn.jsdelivr.net/reveal.js/2.6.2/lib/js/classList.js', condition: function() { return !document.body.classList; } },
+            { src: 'https://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/zoom-js/zoom.js', async: true, condition: function() { return !!document.body.classList; } },
+            { src: 'https://cdn.jsdelivr.net/reveal.js/2.6.2/plugin/notes/notes.js', async: true, condition: function() { return !!document.body.classList; } },
+          ],
+      };
+      function revealAddFragments() {
+        [].forEach.call(document.querySelectorAll( ".fragmented" ), function(elem0) {
+          var elem = (/^H\d$/.test(elem0.nodeName) ? elem0.parentNode : elem0);
+          [].forEach.call(elem.children, function(item) {
+            if (item==elem0) return;
+            if (item && !/\bfragment(ed)?\b/.test(item.className) && item.nodeType===1) {
+              item.className = item.className + " fragment";
+            }
+          });
+        });
+      }
+      function revealQuotedList(listType) {
+        //compatibility with Rmarkdown slides
+        [].forEach.call( document.querySelectorAll("blockquote>" + listType), function(ul) {
+          if (!/\bfragmented\b/.test(ul.className)) {
+            ul.className = ul.className + " fragmented";
+          }        
+          var quote = ul.parentNode;
+          if (quote.childElementCount===1) {
+            quote.parentNode.replaceChild(ul,quote);
+          }
+        });
+      }
+      function revealBuildToFragmented() {
+        [].forEach.call(document.querySelectorAll( ".build" ), function(elem) {
+          if (elem && !/\bfragmented\b/.test(elem.className) && elem.nodeType===1) {
+            elem.className = elem.className + " fragmented";
+          }
+        });
+      }
+      function revealDivNotesToAside() {
+        [].forEach.call(document.querySelectorAll("div.notes"), function(elem) {
+          var aside = document.createElement("ASIDE");
+          if (elem.id) aside.id = elem.id;
+          aside.className = elem.className;
+          [].forEach.call(elem.attributes, function(attr) {
+            aside.setAttribute( attr.name, attr.value );
+          });
+          aside.innerHTML = elem.innerHTML;
+          elem.parentNode.replaceChild(aside,elem);
+        });
+      }
+      function revealDataQuery() {
+        var reveal = document.querySelector(".reveal");
+        if (!reveal) return;
+        window.location.search.replace(/\bdata-(\w+)(?:=(\w+))?\b/g, function(matched,key,value) {
+          reveal.setAttribute("data-" + key, (value ? value : ""));
+          return matched;
+        });
+      }
+      function revealRemoveLong() {
+        // remove parts for 'long' presentation
+        if (/\bpreview(?![\w\-])/.test(document.body.className)) return;
+        var reveal = document.querySelector(".reveal");
+        if (!reveal) return;
+        var value = reveal.hasAttribute("data-long") ? reveal.getAttribute("data-long") : null;
+        if (value==null || value=="false" || value=="0") {
+          [].forEach.call( document.querySelectorAll("section[data-long]"), function(elem) {
+            elem.parentNode.removeChild(elem);
+          });
+        }
+      }
+      revealConfig.onLoad = function() {
+        revealConfig.getEmbeddedImages();
+        revealDataQuery();
+        revealRemoveLong();
+        revealQuotedList("ul");
+        revealQuotedList("ol");
+        revealBuildToFragmented();
+        revealDivNotesToAside();
+        revealAddFragments();
+      };
+      document.addEventListener("load",revealConfig.onLoad);    
+      document.addEventListener("DOMContentLoaded", function() {
+        if (typeof Reveal !== "undefined" && !Reveal.isReady()) {
+          revealConfig.onLoad();
+          Reveal.initialize(revealConfig);
+        }
+      });    
+      // add support for printing:
+      // use  ?print-pdf to get a pdf-printable version (in Chrome)
+      // use  ?print-paper to get a paper-printable version.
+      revealConfig.initPrint = function() {
+        var cssLink = null;
+        var bodyClass = null;
+        var cap = window.location.search.match(/\bprint-(\w+)\b/);
+        if (cap) {
+          bodyClass = cap[0];
+          cssLink = "https://cdn.jsdelivr.net/reveal.js/2.6.2/css/print/" + cap[1] + ".css";
+        }
+        if (cssLink) {
+          var link  = document.createElement( "link" );
+          link.rel  = "stylesheet";
+          link.type = "text/css";
+          link.href = cssLink;
+          var head = document.getElementsByTagName( 'head' )[0];
+          if (head) head.appendChild( link );
+        }
+        if (bodyClass) {
+          document.body.className = document.body.className + " " + bodyClass;
+        }
+      };
+      revealConfig.getEmbeddedImages = function() {
+        var images = {};
+        [].forEach.call( document.querySelectorAll("img[data-linkid]"), function(img) {
+          var linkid = img.getAttribute("data-linkid");
+          if (linkid) images["/" + linkid] = img.src;
+          var path = img.getAttribute("data-path");
+          if (path) images["/" + path] = img.src;
+        });     
+        [].forEach.call( document.querySelectorAll("section"), function(slide) {
+          var attrName = "data-background";
+          var image = slide.getAttribute(attrName);
+          if (!image) {
+            attrName = "data-background-image";
+            image = slide.getAttribute(attrName);
+          }
+          if (!image) return;
+          var cap = /^\s*!?\[([^\]]+)\]\s*$/.exec(image);
+          var href = images["/" + (cap ? cap[1] : image)];
+          if (!href) return;
+          if (attrName==="data-background" && /^data:/.test(href)) href = "url(" + href + ")";
+          slide.setAttribute(attrName, href);
+        });
+      };    
+      </script>
+  </head>
+<body class="madoko">
+
+<div class="body madoko" style="line-adjust:0">
+<div class="reveal" data-long="false" data-details="false" style="line-adjust:0">
+<div class="slides" style="line-adjust:0">
+
+<section class="titleblock align-center para-block" style="text-align:center;line-adjust:0">
+<div class="titleheader align-center" style="text-align:center;line-adjust:0">
+<h1 class="title para-block" style="font-weight:bold;margin-bottom:0.5ex;font-size:3em;line-adjust:0">Ancient Math and Number Systems</h1>
+<h2 class="subtitle para-block" style="margin-bottom:0.5ex;font-size:1.8em;line-adjust:0">Classroom Presentation #1</h2></div>
+<div class="authors align-center" style="text-align:center;width:80%;line-adjust:0"><table class="authorrow columns block" style="margin-top:2ex;width:100%;line-adjust:0">
+<tbody><tr><td class="author column" style="text-align:center;font-size:x-large;line-adjust:0">
+<div class="authorname" style="font-size:1.4em;line-adjust:0">Benjamin J. Kruger</div>
+<div class="authoraddress" style="line-adjust:0">History of Mathematics</div>
+<div class="authoremail email" style="line-adjust:0">kruger@nsuok.edu</div></td></tr></tbody></table></div></section>
+<section id="sec-relevance-of-ancient-math" class="section section1" data-section-depth="1"><h2 id="heading-sec-relevance-of-ancient-math" class="h1" data-heading-depth="1" style="display:block">Relevance of Ancient Math</h2>
+<p class="p noindent">Ancient math is often found to be relevant in one of two ways:
+</p>
+<ol class="ol fragmented compact">
+<li class="li ol-li fragmented-li compact-li">The seemingly outmoded system is still in use, particularly in specific or isolated areas.
+</li>
+<li class="li ol-li fragmented-li compact-li">Techniques developed by the ancients can be applied to solve modern mathematical problems.</li></ol>
+</section>
+<section id="sec-the-babylonian-number-system" class="section section2" data-section-depth="2"><h3 id="heading-sec-the-babylonian-number-system" class="h2" data-heading-depth="2" style="display:block">The Babylonian Number System</h3>
+<p class="p noindent">The Babylonian number system is a great example of one that is still used to this day. The Babylonians used sexigesimal, or base 60. We still use it in several fields:
+</p>
+<ul class="ul list-dash fragmented compact">
+<li class="li ul-li list-dash-li fragmented-li compact-li">Angular measurements (degrees)
+</li>
+<li class="li ul-li list-dash-li fragmented-li compact-li">Time (Hours, minutes, seconds)
+</li>
+<li class="li ul-li list-dash-li fragmented-li compact-li">This system has the benefit of being highly divisible: 60 can be cleanly divided by 2, 3, 4, 5, 6, 10, 12, 15, 20, and 30.</li></ul>
+</section>
+<section class="vertical section">
+
+<section id="vertical" class="section section2" data-section-depth="2"><h3 id="heading-vertical" class="h2" data-heading-depth="2" style="display:block">Ancient Egyptian Multiplication</h3>
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">A trick used by the Ancient Egyptians to multiply two large<em class="em-low1">ish</em> numbers turns out to be the solution for a surprisingly modern problem:
+
+<ul class="ul list-star compact">
+<li class="li ul-li list-star-li compact-li">Implementing multiplication for a microprocessor!
+<br>
+</li></ul></li></ul>
+
+<p class="p noindent"><svg  class="math-inline math-render-svg math" style="vertical-align:-0.2332em;height:0.9699em;width:0.5642em" viewBox='88.467 54.722 5.373 9.237' ><desc>$\downarrow$</desc><g id='page1'><use x='88.667' xlink:href='#g0-35' y='61.836'/></g></svg> for explanation
+</p></section>
+<section id="sec-ancient-egyptian-mult-explained" class="section section2" data-section-depth="2"><h3 id="heading-sec-ancient-egyptian-mult-explained" class="h2" data-heading-depth="2" style="display:block">Ancient Egyptian Mult. (Explained)</h3>
+<p class="p noindent">To multiply <svg  class="math-inline math-render-svg math" style="vertical-align:-0.1082em;height:0.7617em;width:3.9240em" viewBox='34.669 55 37.371 7.254' ><desc>$238 \times 13$</desc><g id='page1'><use x='34.869' xlink:href='#g4-50' y='61.836'/><use x='39.832' xlink:href='#g4-51' y='61.836'/><use x='44.795' xlink:href='#g4-56' y='61.836'/><use x='51.971' xlink:href='#g0-2' y='61.836'/><use x='61.905' xlink:href='#g4-49' y='61.836'/><use x='66.868' xlink:href='#g4-51' y='61.836'/></g></svg>, two columns:
+</p>
+<ul class="ul list-dash compact">
+<li class="li ul-li list-dash-li compact-li">Left column: powers of 2, up to 238
+</li>
+<li class="li ul-li list-dash-li compact-li">Right column: successive doubling of 13
+</li></ul>
+
+<div class="framed" style="border:solid black 1px;padding:1ex;margin-top:1ex">
+<p class="p noindent">By selecting the the powers of 2 who&#39;s sum totals 238, we find the corresponding numbers in the right column which sum to the answer.</p></div>
+<p class="p noindent"><br>
+</p>
+<p class="p indent"><svg  class="math-inline math-render-svg math" style="vertical-align:-0.2332em;height:0.9699em;width:0.5642em" viewBox='88.467 54.722 5.373 9.237' ><desc>$\downarrow$</desc><g id='page1'><use x='88.667' xlink:href='#g0-35' y='61.836'/></g></svg> for example
+</p></section>
+<section id="sec-ancient-egyptian-mult-example" class="section section2" data-section-depth="2"><h3 id="heading-sec-ancient-egyptian-mult-example" class="h2" data-heading-depth="2" style="display:block">Ancient Egyptian Mult. (Example)</h3>
+<div class="framed" style="border:solid black 1px;padding:1ex;margin-top:1ex">
+<table class="madoko block" style="tbody-tr-2-background-color:Gainsboro;tbody-tr-3-background-color:Gainsboro;tbody-tr-4-background-color:Gainsboro;tbody-tr-6-background-color:Gainsboro;tbody-tr-7-background-color:Gainsboro;tbody-tr-8-background-color:Gainsboro">
+<thead><tr><th class="col thead tr-odd tr-last tr-first col-odd col-first" data-row="1" data-col="1" style="font-weight:bold">238</th><th class="col thead tr-odd tr-last tr-first col-even" data-row="1" data-col="2" style="font-weight:bold"> x </th><th class="col thead tr-odd tr-last tr-first col-odd col-last" data-row="1" data-col="3" style="font-weight:bold"> 13 </th></tr></thead>
+<tbody><tr><td class="tbody tr-even col cell-line col-odd col-first" data-row="0" data-col="1"></td><td class="tbody tr-even col cell-line col-even" data-row="0" data-col="2"></td><td class="tbody tr-even col cell-line col-odd col-last" data-row="0" data-col="3"></td></tr>
+<tr><td class="tbody tr-odd tr-first col col-odd col-first" data-row="1" data-col="1"> 1 </td><td class="tbody tr-odd tr-first col col-even" data-row="1" data-col="2">   </td><td class="tbody tr-odd tr-first col col-odd col-last" data-row="1" data-col="3"> 13 </td></tr>
+<tr><td class="tbody tr-even col col-odd col-first" data-row="2" data-col="1" style="background-color:Gainsboro"> 2 </td><td class="tbody tr-even col col-even" data-row="2" data-col="2" style="background-color:Gainsboro">   </td><td class="tbody tr-even col col-odd col-last" data-row="2" data-col="3" style="background-color:Gainsboro"> 26 </td></tr>
+<tr><td class="tbody tr-odd col col-odd col-first" data-row="3" data-col="1" style="background-color:Gainsboro"> 4 </td><td class="tbody tr-odd col col-even" data-row="3" data-col="2" style="background-color:Gainsboro">   </td><td class="tbody tr-odd col col-odd col-last" data-row="3" data-col="3" style="background-color:Gainsboro"> 52 </td></tr>
+<tr><td class="tbody tr-even col col-odd col-first" data-row="4" data-col="1" style="background-color:Gainsboro"> 8 </td><td class="tbody tr-even col col-even" data-row="4" data-col="2" style="background-color:Gainsboro">   </td><td class="tbody tr-even col col-odd col-last" data-row="4" data-col="3" style="background-color:Gainsboro"> 104</td></tr>
+<tr><td class="tbody tr-odd col col-odd col-first" data-row="5" data-col="1"> 16</td><td class="tbody tr-odd col col-even" data-row="5" data-col="2">   </td><td class="tbody tr-odd col col-odd col-last" data-row="5" data-col="3"> 208</td></tr>
+<tr><td class="tbody tr-even col col-odd col-first" data-row="6" data-col="1" style="background-color:Gainsboro"> 32</td><td class="tbody tr-even col col-even" data-row="6" data-col="2" style="background-color:Gainsboro">   </td><td class="tbody tr-even col col-odd col-last" data-row="6" data-col="3" style="background-color:Gainsboro"> 416</td></tr>
+<tr><td class="tbody tr-odd col col-odd col-first" data-row="7" data-col="1" style="background-color:Gainsboro"> 64</td><td class="tbody tr-odd col col-even" data-row="7" data-col="2" style="background-color:Gainsboro">   </td><td class="tbody tr-odd col col-odd col-last" data-row="7" data-col="3" style="background-color:Gainsboro"> 832</td></tr>
+<tr><td class="tbody tr-even col col-odd col-first" data-row="8" data-col="1" style="background-color:Gainsboro">128</td><td class="tbody tr-even col col-even" data-row="8" data-col="2" style="background-color:Gainsboro">   </td><td class="tbody tr-even col col-odd col-last" data-row="8" data-col="3" style="background-color:Gainsboro">1664</td></tr>
+<tr><td class="tbody tr-even col cell-line col-odd col-first" data-row="8" data-col="1" style="background-color:Gainsboro"></td><td class="tbody tr-even col cell-line col-even" data-row="8" data-col="2" style="background-color:Gainsboro"></td><td class="tbody tr-even col cell-line col-odd col-last" data-row="8" data-col="3" style="background-color:Gainsboro"></td></tr>
+<tr><td class="tbody tr-odd tr-last col col-odd col-first" data-row="9" data-col="1">238</td><td class="tbody tr-odd tr-last col col-even" data-row="9" data-col="2">   </td><td class="tbody tr-odd tr-last col col-odd col-last" data-row="9" data-col="3">3094</td></tr></tbody></table></div>
+<aside class="notes"></aside></section></section>
+<section class="vertical section" data-background="Gainsboro">
+<section id="vertical" class="section section2" data-section-depth="2"><h3 id="heading-vertical" class="h2" data-heading-depth="2" style="display:block">Microprocessors</h3>
+<p class="p noindent">Simple microprocessors aren&#39;t inherently capable of multiplication. Generally, they are equipped with only the most basic functions, such as:
+</p>
+<ul class="ul list-dash compact">
+<li class="li ul-li list-dash-li compact-li">Read/write from memory
+</li>
+<li class="li ul-li list-dash-li compact-li">Add/subtract
+</li>
+<li class="li ul-li list-dash-li compact-li">Doubling or halving a value (<svg  class="math-inline math-render-svg math" style="vertical-align:-0.2332em;height:0.9699em;width:0.5642em" viewBox='88.467 54.722 5.373 9.237' ><desc>$\downarrow$</desc><g id='page1'><use x='88.667' xlink:href='#g0-35' y='61.836'/></g></svg> for why this is) 
+</li></ul>
+
+<p class="p noindent">&#160;
+</p>
+<p class="p indent">How do we use these simple functions to implement multiplication?
+</p></section>
+<section id="sec-doubling-and-halving" class="section section2" data-section-depth="2"><h3 id="heading-sec-doubling-and-halving" class="h2" data-heading-depth="2" style="display:block">Doubling and Halving</h3>
+<p class="p noindent">Consider how easy it is to multiply (or divide) a decimal number by 10. 
+</p>
+<p class="p indent"><br>
+Essentially, you just shift everything over to the left to multiply (padding with zeros as needed):
+</p>
+<div class="framed" style="border:solid black 1px;padding:1ex;margin-top:1ex">
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><svg  class="mathdisplay math-display math-render-svg math" data-math-full="" style="vertical-align:-0.0210em;height:0.7617em;width:7.3591em" viewBox='171.379 56.993 70.087 7.254' ><desc>\[  123 \times 10 = 1230
+\]</desc><g id='page1'><use x='171.579' xlink:href='#g1-49' y='63.828'/><use x='176.542' xlink:href='#g1-50' y='63.828'/><use x='181.504' xlink:href='#g1-51' y='63.828'/><use x='188.681' xlink:href='#g0-2' y='63.828'/><use x='198.615' xlink:href='#g1-49' y='63.828'/><use x='203.577' xlink:href='#g1-48' y='63.828'/><use x='211.307' xlink:href='#g1-61' y='63.828'/><use x='221.794' xlink:href='#g1-49' y='63.828'/><use x='226.757' xlink:href='#g1-50' y='63.828'/><use x='231.72' xlink:href='#g1-51' y='63.828'/><use x='236.683' xlink:href='#g1-48' y='63.828'/></g></svg></div></div></div>
+<p class="p noindent"><svg  class="math-inline math-render-svg math" style="vertical-align:-0.2332em;height:0.9699em;width:0.5642em" viewBox='88.467 54.722 5.373 9.237' ><desc>$\downarrow$</desc><g id='page1'><use x='88.667' xlink:href='#g0-35' y='61.836'/></g></svg> (Continued)
+</p></section>
+<section class="slide section">
+<p class="p noindent"><br>
+</p>
+<p class="p indent">To divide, you shift everything to the right:
+</p>
+<div class="framed" style="border:solid black 1px;padding:1ex;margin-top:1ex">
+<div class="math para-block">
+<div class="mathdisplay para-block input-math" data-math-full="" style="line-adjust:0"><svg  class="mathdisplay math-display math-render-svg math" data-math-full="" style="vertical-align:-0.0210em;height:0.7690em;width:7.3162em" viewBox='225.177 56.993 69.678 7.324' ><desc>\[  3210 \div 10 = 321
+\]</desc><g id='page1'><use x='225.377' xlink:href='#g1-51' y='63.828'/><use x='230.34' xlink:href='#g1-50' y='63.828'/><use x='235.303' xlink:href='#g1-49' y='63.828'/><use x='240.265' xlink:href='#g1-48' y='63.828'/><use x='247.442' xlink:href='#g0-4' y='63.828'/><use x='257.376' xlink:href='#g1-49' y='63.828'/><use x='262.338' xlink:href='#g1-48' y='63.828'/><use x='270.068' xlink:href='#g1-61' y='63.828'/><use x='280.555' xlink:href='#g1-51' y='63.828'/><use x='285.518' xlink:href='#g1-50' y='63.828'/><use x='290.481' xlink:href='#g1-49' y='63.828'/></g></svg></div></div></div>
+<p class="p noindent"><br>
+A computer, however, functions in binary. So the simple operations for it are doubling and halving. It&#39;s called <em class="em-low1">bit shifting</em>.
+</p></section></section>
+<section class="slide section">
+<ul class="ul list-dash compact">
+<li class="li ul-li list-dash-li compact-li"><em class="em-low1">We turn to the mathematics of the ancients!</em>
+</li></ul>
+
+<p class="p noindent"><br>
+</p>
+<ul class="ul list-dash compact">
+<li class="li ul-li list-dash-li compact-li fragment">The Egyptian multiplication method can easily be encoded to implement multiplication on a microprocessor.</li></ul></section></div></div><span data-line=""></span></div>
+<svg id='math-svg-paths' style='display:none' version='1.1' viewBox='0 0 0 0' xmlns='http://www.w3.org/2000/svg' xmlns:xlink='http://www.w3.org/1999/xlink'>
+<defs>
+<path d='M2.929 -6.376C2.929 -6.615 2.929 -6.635 2.7 -6.635C2.082 -5.998 1.205 -5.998 0.887 -5.998V-5.689C1.086 -5.689 1.674 -5.689 2.192 -5.948V-0.787C2.192 -0.428 2.162 -0.309 1.265 -0.309H0.946V0C1.295 -0.03 2.162 -0.03 2.56 -0.03S3.826 -0.03 4.174 0V-0.309H3.856C2.959 -0.309 2.929 -0.418 2.929 -0.787V-6.376Z' id='g4-49'/>
+<path d='M1.265 -0.767L2.321 -1.793C3.875 -3.168 4.473 -3.706 4.473 -4.702C4.473 -5.838 3.577 -6.635 2.361 -6.635C1.235 -6.635 0.498 -5.719 0.498 -4.832C0.498 -4.274 0.996 -4.274 1.026 -4.274C1.196 -4.274 1.544 -4.394 1.544 -4.802C1.544 -5.061 1.365 -5.32 1.016 -5.32C0.936 -5.32 0.917 -5.32 0.887 -5.31C1.116 -5.958 1.654 -6.326 2.232 -6.326C3.138 -6.326 3.567 -5.519 3.567 -4.702C3.567 -3.905 3.068 -3.118 2.521 -2.501L0.608 -0.369C0.498 -0.259 0.498 -0.239 0.498 0H4.194L4.473 -1.733H4.224C4.174 -1.435 4.105 -0.996 4.005 -0.847C3.935 -0.767 3.278 -0.767 3.059 -0.767H1.265Z' id='g4-50'/>
+<path d='M2.889 -3.507C3.706 -3.776 4.284 -4.473 4.284 -5.26C4.284 -6.077 3.407 -6.635 2.451 -6.635C1.445 -6.635 0.687 -6.037 0.687 -5.28C0.687 -4.951 0.907 -4.762 1.196 -4.762C1.504 -4.762 1.704 -4.981 1.704 -5.27C1.704 -5.768 1.235 -5.768 1.086 -5.768C1.395 -6.257 2.052 -6.386 2.411 -6.386C2.819 -6.386 3.367 -6.167 3.367 -5.27C3.367 -5.151 3.347 -4.573 3.088 -4.134C2.79 -3.656 2.451 -3.626 2.202 -3.616C2.122 -3.606 1.883 -3.587 1.813 -3.587C1.733 -3.577 1.664 -3.567 1.664 -3.467C1.664 -3.357 1.733 -3.357 1.903 -3.357H2.341C3.158 -3.357 3.527 -2.68 3.527 -1.704C3.527 -0.349 2.839 -0.06 2.401 -0.06C1.973 -0.06 1.225 -0.229 0.877 -0.817C1.225 -0.767 1.534 -0.986 1.534 -1.365C1.534 -1.724 1.265 -1.923 0.976 -1.923C0.737 -1.923 0.418 -1.783 0.418 -1.345C0.418 -0.438 1.345 0.219 2.431 0.219C3.646 0.219 4.553 -0.687 4.553 -1.704C4.553 -2.521 3.925 -3.298 2.889 -3.507Z' id='g4-51'/>
+<path d='M1.624 -4.553C1.166 -4.852 1.126 -5.191 1.126 -5.36C1.126 -5.968 1.773 -6.386 2.481 -6.386C3.208 -6.386 3.846 -5.868 3.846 -5.151C3.846 -4.583 3.457 -4.105 2.859 -3.756L1.624 -4.553ZM3.078 -3.606C3.796 -3.975 4.284 -4.493 4.284 -5.151C4.284 -6.067 3.397 -6.635 2.491 -6.635C1.494 -6.635 0.687 -5.898 0.687 -4.971C0.687 -4.792 0.707 -4.344 1.126 -3.875C1.235 -3.756 1.604 -3.507 1.853 -3.337C1.275 -3.049 0.418 -2.491 0.418 -1.504C0.418 -0.448 1.435 0.219 2.481 0.219C3.606 0.219 4.553 -0.608 4.553 -1.674C4.553 -2.032 4.443 -2.481 4.065 -2.899C3.875 -3.108 3.716 -3.208 3.078 -3.606ZM2.082 -3.188L3.308 -2.411C3.587 -2.222 4.055 -1.923 4.055 -1.315C4.055 -0.578 3.308 -0.06 2.491 -0.06C1.634 -0.06 0.917 -0.677 0.917 -1.504C0.917 -2.082 1.235 -2.72 2.082 -3.188Z' id='g4-56'/>
+<path d='M3.875 -2.77L1.883 -4.752C1.763 -4.872 1.743 -4.892 1.664 -4.892C1.564 -4.892 1.465 -4.802 1.465 -4.692C1.465 -4.623 1.484 -4.603 1.594 -4.493L3.587 -2.491L1.594 -0.488C1.484 -0.379 1.465 -0.359 1.465 -0.289C1.465 -0.179 1.564 -0.09 1.664 -0.09C1.743 -0.09 1.763 -0.11 1.883 -0.229L3.866 -2.212L5.928 -0.149C5.948 -0.139 6.017 -0.09 6.077 -0.09C6.197 -0.09 6.276 -0.179 6.276 -0.289C6.276 -0.309 6.276 -0.349 6.247 -0.399C6.237 -0.418 4.653 -1.983 4.154 -2.491L5.978 -4.314C6.027 -4.374 6.177 -4.503 6.227 -4.563C6.237 -4.583 6.276 -4.623 6.276 -4.692C6.276 -4.802 6.197 -4.892 6.077 -4.892C5.998 -4.892 5.958 -4.852 5.848 -4.742L3.875 -2.77Z' id='g0-2'/>
+<path d='M2.69 -6.555C2.69 -6.735 2.69 -6.914 2.491 -6.914S2.291 -6.735 2.291 -6.555V0.548C2.052 0.169 1.773 -0.11 1.524 -0.299C0.917 -0.757 0.309 -0.857 0.289 -0.857C0.169 -0.857 0.169 -0.747 0.169 -0.667C0.169 -0.508 0.179 -0.498 0.399 -0.428C1.076 -0.239 1.465 0.12 1.694 0.369C2.202 0.917 2.321 1.514 2.381 1.823C2.391 1.873 2.421 1.923 2.491 1.923C2.58 1.923 2.59 1.853 2.61 1.763C2.829 0.638 3.547 -0.139 4.643 -0.448C4.792 -0.498 4.812 -0.498 4.812 -0.667C4.812 -0.747 4.812 -0.857 4.692 -0.857C4.663 -0.857 4.075 -0.747 3.507 -0.339C3.178 -0.09 2.909 0.209 2.69 0.548V-6.555Z' id='g0-35'/>
+<path d='M4.583 -3.188C4.583 -3.985 4.533 -4.782 4.184 -5.519C3.726 -6.476 2.909 -6.635 2.491 -6.635C1.893 -6.635 1.166 -6.376 0.757 -5.45C0.438 -4.762 0.389 -3.985 0.389 -3.188C0.389 -2.441 0.428 -1.544 0.837 -0.787C1.265 0.02 1.993 0.219 2.481 0.219C3.019 0.219 3.776 0.01 4.214 -0.936C4.533 -1.624 4.583 -2.401 4.583 -3.188ZM2.481 0C2.092 0 1.504 -0.249 1.325 -1.205C1.215 -1.803 1.215 -2.72 1.215 -3.308C1.215 -3.945 1.215 -4.603 1.295 -5.141C1.484 -6.326 2.232 -6.416 2.481 -6.416C2.809 -6.416 3.467 -6.237 3.656 -5.25C3.756 -4.692 3.756 -3.935 3.756 -3.308C3.756 -2.56 3.756 -1.883 3.646 -1.245C3.497 -0.299 2.929 0 2.481 0Z' id='g1-48'/>
+<path d='M2.929 -6.376C2.929 -6.615 2.929 -6.635 2.7 -6.635C2.082 -5.998 1.205 -5.998 0.887 -5.998V-5.689C1.086 -5.689 1.674 -5.689 2.192 -5.948V-0.787C2.192 -0.428 2.162 -0.309 1.265 -0.309H0.946V0C1.295 -0.03 2.162 -0.03 2.56 -0.03S3.826 -0.03 4.174 0V-0.309H3.856C2.959 -0.309 2.929 -0.418 2.929 -0.787V-6.376Z' id='g1-49'/>
+<path d='M1.265 -0.767L2.321 -1.793C3.875 -3.168 4.473 -3.706 4.473 -4.702C4.473 -5.838 3.577 -6.635 2.361 -6.635C1.235 -6.635 0.498 -5.719 0.498 -4.832C0.498 -4.274 0.996 -4.274 1.026 -4.274C1.196 -4.274 1.544 -4.394 1.544 -4.802C1.544 -5.061 1.365 -5.32 1.016 -5.32C0.936 -5.32 0.917 -5.32 0.887 -5.31C1.116 -5.958 1.654 -6.326 2.232 -6.326C3.138 -6.326 3.567 -5.519 3.567 -4.702C3.567 -3.905 3.068 -3.118 2.521 -2.501L0.608 -0.369C0.498 -0.259 0.498 -0.239 0.498 0H4.194L4.473 -1.733H4.224C4.174 -1.435 4.105 -0.996 4.005 -0.847C3.935 -0.767 3.278 -0.767 3.059 -0.767H1.265Z' id='g1-50'/>
+<path d='M2.889 -3.507C3.706 -3.776 4.284 -4.473 4.284 -5.26C4.284 -6.077 3.407 -6.635 2.451 -6.635C1.445 -6.635 0.687 -6.037 0.687 -5.28C0.687 -4.951 0.907 -4.762 1.196 -4.762C1.504 -4.762 1.704 -4.981 1.704 -5.27C1.704 -5.768 1.235 -5.768 1.086 -5.768C1.395 -6.257 2.052 -6.386 2.411 -6.386C2.819 -6.386 3.367 -6.167 3.367 -5.27C3.367 -5.151 3.347 -4.573 3.088 -4.134C2.79 -3.656 2.451 -3.626 2.202 -3.616C2.122 -3.606 1.883 -3.587 1.813 -3.587C1.733 -3.577 1.664 -3.567 1.664 -3.467C1.664 -3.357 1.733 -3.357 1.903 -3.357H2.341C3.158 -3.357 3.527 -2.68 3.527 -1.704C3.527 -0.349 2.839 -0.06 2.401 -0.06C1.973 -0.06 1.225 -0.229 0.877 -0.817C1.225 -0.767 1.534 -0.986 1.534 -1.365C1.534 -1.724 1.265 -1.923 0.976 -1.923C0.737 -1.923 0.418 -1.783 0.418 -1.345C0.418 -0.438 1.345 0.219 2.431 0.219C3.646 0.219 4.553 -0.687 4.553 -1.704C4.553 -2.521 3.925 -3.298 2.889 -3.507Z' id='g1-51'/>
+<path d='M6.844 -3.258C6.994 -3.258 7.183 -3.258 7.183 -3.457S6.994 -3.656 6.854 -3.656H0.887C0.747 -3.656 0.558 -3.656 0.558 -3.457S0.747 -3.258 0.897 -3.258H6.844ZM6.854 -1.325C6.994 -1.325 7.183 -1.325 7.183 -1.524S6.994 -1.724 6.844 -1.724H0.897C0.747 -1.724 0.558 -1.724 0.558 -1.524S0.747 -1.325 0.887 -1.325H6.854Z' id='g1-61'/>
+<path d='M4.513 -4.643C4.513 -4.961 4.244 -5.27 3.875 -5.27C3.497 -5.27 3.238 -4.961 3.238 -4.643S3.507 -4.015 3.875 -4.015C4.254 -4.015 4.513 -4.324 4.513 -4.643ZM4.513 -0.339C4.513 -0.658 4.244 -0.966 3.875 -0.966C3.497 -0.966 3.238 -0.658 3.238 -0.339S3.507 0.289 3.875 0.289C4.254 0.289 4.513 -0.02 4.513 -0.339ZM0.897 -2.69C0.727 -2.69 0.548 -2.69 0.548 -2.491S0.727 -2.291 0.897 -2.291H6.854C7.024 -2.291 7.203 -2.291 7.203 -2.491S7.024 -2.69 6.854 -2.69H0.897Z' id='g0-4'/>
+</defs>
+</svg>
+
+</body>
+<script>
+    // initialize printing
+    revealConfig.initPrint();
+    // initialize background embedded images
+    revealConfig.getEmbeddedImages();
+    </script>
+</html>
