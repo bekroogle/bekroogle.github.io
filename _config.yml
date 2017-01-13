@@ -1,0 +1,8 @@
+title: Benjamin J. Kruger
+description: Northeastern State University
+google_analytics: UA-74853705-1
+show_downloads: true
+theme: jekyll-theme-architect
+
+gems:
+  - jekyll-mentions
